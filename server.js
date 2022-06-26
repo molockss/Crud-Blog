@@ -11,7 +11,7 @@ app.use ('/articles', articleRouter)  // we want the articles to appear after th
 app.get ('/', (req,res)=> {
     const articles = [ {
         title : 'Test Article',
-        createdAt: Date.now(),
+        createdAt: new Date(),
         description: 'test decription'
     }
 
