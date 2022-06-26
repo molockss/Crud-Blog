@@ -9,7 +9,15 @@ app.use ('/articles', articleRouter)  // we want the articles to appear after th
 
 
 app.get ('/', (req,res)=> {
-    res.render ('index') // we use render as its going to access the views folder
+    const articles = [ {
+        title : 'Test Article',
+        createdAt: Date.now(),
+        description: 'test decription'
+    }
+
+    ]
+    res.render ('index', {articles: articles}) // we use render as its going to access the views folder and the index.ejs inside
+    // we can then pass in whatever we want so "articles" is located in ejs and we're passing an object
 })
 
 app.listen(5000)
