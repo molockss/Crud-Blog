@@ -7,9 +7,15 @@ const router = express.Router() // this is a function and gives us a route we ca
 
 
 
-router.get ('/', (req, res) => {
-    res.send ('In articles')
+router.get ('/new', (req, res) => {
+    res.render ('articles/new')
 })
 
+
+router.post('/', (req,res) => {   // when we submit a form its gona call this router.post which will tkae it to / after the article
+
+    console.log ('weve posted')
+
+})
 
 module.exports = router

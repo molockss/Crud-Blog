@@ -16,7 +16,7 @@ app.get ('/', (req,res)=> {
     }
 
     ]
-    res.render ('index', {articles: articles}) // we use render as its going to access the views folder and the index.ejs inside
+    res.render ('articles/index', {articles: articles}) // we use render as its going to access the views folder and the index.ejs inside
     // we can then pass in whatever we want so "articles" is located in ejs and we're passing an object
 })
 
